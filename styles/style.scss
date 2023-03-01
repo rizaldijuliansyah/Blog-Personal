@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* Navbar */
+nav{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Pacifico', cursive;
+    border-bottom: 1px solid rgb(187, 187, 187);
+
+    nav .logo{
+        letter-spacing: 3px;
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+        width: 60%;
+        justify-content: space-between;
+
+        li{
+            a{
+                color: rgb(0, 0, 0);
+                text-decoration: none; 
+                font-size: 0.9em;
+                font-family: 'PT Sans', sans-serif;
+
+                &:hover{
+                    color: #b1b1b1;
+                }
+            }
+        }
+    }
+
+    .btn-nav{
+        background-color: #45818E;
+        padding: 5px 20px;
+        border-radius: 11px;
+        border: 1px solid #45818E;
+        display: flex;
+        // margin-left: 100px;
+
+        &:hover{
+            background-color: #00D1FF ;
+        }
+        
+        a{
+            text-decoration: none; 
+            font-size: 1.2em;
+            font-family: 'PT Sans', sans-serif;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+    }
+
+    /* Hamburger Menu */
+
+    .menu-toggle{
+        display: none;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+        position: relative;
+
+        input{
+            position: absolute;
+            width: 40px;
+            height: 28px;
+            left: -6px;
+            top: -3px;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        span{
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 3px;
+            transition: all 0.5s;
+        }
+    }
+
+    /* Hamburger Animation */
+    .menu-toggle {
+        span:nth-child(2){
+           transform-origin: 0 0;
+        }
+
+        span:nth-child(4){
+            transform-origin: 0 100%;
+         }
+
+        input:checked ~ span:nth-child(2){
+            transform: rotate(45deg) translate(-1px, -1px);
+            background-color: rgb(0, 0, 0);
+        }
+
+        input:checked ~ span:nth-child(3){
+            display: none;
+        }
+
+        input:checked ~ span:nth-child(4){
+            transform: rotate(-45deg) translate(-1px, 0);
+            background-color: rgb(0, 0, 0);
+        }
+    }    
+}
+
+.head-section{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#FEFEFE, #95F5F0);
+    height: 30%;
+    width: 100%;
+
+    h1{
+        text-align: center;
+        margin: 60px 0;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    img{
+        position: relative;
+        width: 30%;
+        margin: 0 auto;
+    }
+}
+
+.body-section{
+    position: relative;
+    height: 45vh;
+    width: 45%;
+    background-color: #45818E;
+    margin: -30px auto 180px auto;
+    text-align: center;
+    border-radius: 11px;
+        
+        p{
+            padding: 50px 10px;
+            font-size: 16px;
+            font-family: 'PT Sans', sans-serif;
+            color: #FEFEFE;
+        }
+    
+        h2{
+            font-family: 'Ubuntu', sans-serif;
+            color: #FEFEFE;
+            padding-top: 15px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    
+        a{
+            color: #000;
+            font-weight: 600;
+            font-size: 14px;
+        }
+}
+
+.project-section{
+    
+    h3{
+        font-size: 20px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    h4{
+        margin-top: 50px;
+        margin-left: 10%;
+        margin-bottom: 30px;
+    }
+
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    a{
+        margin-left: 25%;
+        color: #000;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}
+
+
+footer{
+    margin-top: 100px;
+
+    .footer-contact{
+        background-color: #45818E;
+        margin-top: -50px;
+        text-align: center;
+        color: white;
+    
+        h3{
+            font-family: 'Ubuntu', sans-serif;
+            margin-bottom: 30px;
+        }
+    
+        p{
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+    }
+    
+    .footer-image{
+        background-color: #45818E;
+        margin-top: -30px;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-around;
+        img{
+            width: 50px;
+        }
+    }
+}
+
+.portfolio-section{
+    h3{
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .gallery-img{
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .gallery-flex{
+        display: flex;
+        margin: 0 auto;
+        width: 50%;
+        margin-bottom: 30px;
+
+        .gallery-item{
+            margin: 0 auto;
+            width: 50%;
+        }
+    }
+
+    p{
+        margin-left: 20%;
+    }
+
+    table{
+        margin-left: 20%;
+        font-size: 14px;
+        margin-bottom: 150px;
+
+        th{
+            padding-right: 6px;
+            text-align: left;
+            margin-left: 5px;
+        }
+    }
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px){
+   ul{
+    width: 60%;
+   } 
+
+   .body-section{
+    p{
+        font-size: 14px;
+    }
+
+    h2{
+        font-size: 20px;
+        margin-top: -15px;
+    }
+   }
+}
+
+@media screen and (max-width: 576px){
+    body{
+        overflow-x: hidden;
+    }
+
+    nav .menu-toggle{
+        display: flex;
+    }
+
+    nav ul{
+     margin-top: 51px;
+     position: absolute;
+     right: 0;
+     width: 80%;
+     z-index: 1;
+     flex-direction: column;
+     height: 100vh;
+     justify-content: space-evenly;
+     background-color: rgb(255, 255, 255);
+     top: 0;
+     align-items: center;
+     transform: translateX(100%);
+     transition: all 1s;
+    }
+
+    nav .slide{
+       transform: translateX(0);
+    }
+
+    .body-section{
+        p{
+            font-size: 12px;
+        }
+    
+        h2{
+            font-size: 20px;
+            margin-top: -15px;
+        }
+    }
+ }
