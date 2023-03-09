@@ -5,7 +5,7 @@
 
 body {
   font-family: "PT Sans", sans-serif;
-  overflow-x: hidden;
+  overflow-block: hidden;
 }
 
 /* Navbar */
@@ -17,7 +17,6 @@ nav {
   align-items: center;
   color: rgb(0, 0, 0);
   font-family: "Pacifico", cursive;
-  border-bottom: 1px solid rgb(187, 187, 187);
   /* Hamburger Menu */
   /* Hamburger Animation */
 }
@@ -33,11 +32,12 @@ nav ul {
 nav ul li a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 1em;
   font-family: "PT Sans", sans-serif;
 }
 nav ul li a:hover {
-  color: #b1b1b1;
+  color: #00D1FF;
+  text-decoration: underline;
 }
 nav .btn-nav {
   background-color: #45818E;
@@ -144,28 +144,39 @@ nav .menu-toggle input:checked ~ span:nth-child(4) {
   font-size: 14px;
 }
 
-.project-section h3 {
-  font-size: 20px;
-  margin-bottom: 50px;
-  text-align: center;
+.project-section .project {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  border: 1px solid #FEFEFE;
+  border-radius: 10px;
+  box-shadow: #000000 0px 5px 15px;
+  padding: 30px 0;
 }
-.project-section h4 {
+.project-section .project h3 {
+  font-size: 35px;
+  margin-top: -57px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+.project-section .project h4 {
   margin-top: 50px;
   margin-left: 10%;
   margin-bottom: 30px;
 }
-.project-section img {
+.project-section .project img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 60%;
   margin-bottom: 30px;
 }
-.project-section a {
-  margin-left: 25%;
+.project-section .project a {
+  margin-left: 20%;
   color: #000;
   font-weight: 700;
   font-size: 14px;
+  margin-bottom: 15px;
 }
 
 footer {
@@ -176,58 +187,156 @@ footer .footer-contact {
   margin-top: -50px;
   text-align: center;
   color: white;
+  padding: 30px;
 }
-footer .footer-contact h3 {
-  font-family: "Ubuntu", sans-serif;
-  margin-bottom: 30px;
-}
-footer .footer-contact p {
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-}
-footer .footer-image {
-  background-color: #45818E;
-  margin-top: -30px;
-  padding-top: 30px;
+footer .footer-item {
   display: flex;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: space-evenly;
 }
-footer .footer-image img {
-  width: 50px;
+footer .footer-detail {
+  display: grid;
+}
+footer .footer-detail h4 {
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+footer .footer-detail a {
+  font-size: 18px;
+  line-height: 30px;
+  text-decoration: none;
+  color: #FEFEFE;
+}
+footer .footer-detail a:hover {
+  text-decoration: underline;
+  color: #00D1FF;
+}
+footer .footer-btn .btn-nav {
+  margin-top: 45px;
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 11px;
+  border: 1px solid #45818E;
+  display: block;
+}
+footer .footer-btn .btn-nav:hover {
+  background-color: #00D1FF;
+}
+footer .footer-btn .btn-nav a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: "PT Sans", sans-serif;
+  color: rgb(131, 131, 131);
+  font-weight: bold;
 }
 
-.portfolio-section h3 {
-  text-align: center;
-  margin: 50px 0;
+.portfolio-section {
+  margin: 60px auto;
 }
-.portfolio-section .gallery-img {
+.portfolio-section .gallery {
+  display: grid;
+  width: 50%;
+  border: 1px solid #fff;
+  box-shadow: #000000 0px 5px 15px;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 30px auto;
+}
+.portfolio-section .gallery a {
+  margin-top: -45px;
+  margin-bottom: 50px;
+  font-size: 1.5em;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.portfolio-section .gallery .gallery-img {
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 80%;
   margin-bottom: 20px;
 }
-.portfolio-section .gallery-flex {
+.portfolio-section .gallery .gallery-flex {
   display: flex;
   margin: 0 auto;
-  width: 50%;
+  width: 70%;
   margin-bottom: 30px;
 }
-.portfolio-section .gallery-flex .gallery-item {
+.portfolio-section .gallery .gallery-flex .gallery-item {
   margin: 0 auto;
   width: 50%;
 }
-.portfolio-section p {
-  margin-left: 20%;
+.portfolio-section .gallery .gallery-flex-2 {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  margin-bottom: 30px;
 }
-.portfolio-section table {
-  margin-left: 20%;
+.portfolio-section .gallery .gallery-flex-2 .gallery-item {
+  margin: 0 auto;
+  width: 35%;
+}
+.portfolio-section .gallery .span-item {
+  display: flex;
+  justify-content: space-evenly;
+}
+.portfolio-section .gallery .span-item a {
   font-size: 14px;
-  margin-bottom: 150px;
+  text-decoration: none;
+  font-style: italic;
+  color: #000;
+  font-weight: 700;
 }
-.portfolio-section table th {
-  padding-right: 6px;
-  text-align: left;
-  margin-left: 5px;
+.portfolio-section .gallery .span-item .group {
+  display: flex;
+}
+.portfolio-section .gallery .span-item .group .items-1 {
+  margin-top: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #fbff07;
+  border-radius: 100%;
+}
+.portfolio-section .gallery .span-item .group .items-2 {
+  margin-top: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #07c3e4;
+  border-radius: 100%;
+}
+.portfolio-section .gallery .span-item .group .items-3 {
+  margin-top: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #4909df;
+  border-radius: 100%;
+}
+.portfolio-section .gallery .span-item .group .items-4 {
+  margin-top: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #05f511;
+  border-radius: 100%;
+}
+.portfolio-section .gallery .span-item .group .items-5 {
+  margin-top: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffae00;
+  border-radius: 100%;
+}
+.portfolio-section .gallery .span-item .group .items-6 {
+  margin-top: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #97eff5;
+  border-radius: 100%;
+}
+.portfolio-section .gallery .span-item .group p {
+  font-size: 12px;
+  margin-left: 3px;
+  font-style: italic;
 }
 
 /* Responsive */
@@ -274,5 +383,16 @@ footer .footer-image img {
   .body-section h2 {
     font-size: 20px;
     margin-top: -15px;
+  }
+  footer .footer-item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  footer .footer-item .footer-detail {
+    width: 50%;
+  }
+  footer .footer-item .footer-btn {
+    display: grid;
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
